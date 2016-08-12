@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload New File</title>
+</head>
+<body>
+    <div id="Header">
+        <p id="HeaderBrand">Music Sharer</p>
+    </div>
+
+    <div id="upload-wrapper">
+    <h3>Upload New File</h3>
+    <div>
+        <form id="uploadform">
+            <label>Title: </label>
+            <input type="text" id="newtitle"><br><br>
+            <label>Genre: </label>
+            <select id="newgenre">
+                <option value="alternative">Alternative</option>
+                <option value="hiphop">Hip-Hop</option>
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="country">Country</option>
+                <option value="edm">Dance/Electronic</option>
+                <option value="classical">Classical</option>
+            </select><br><br>
+	    <!--
+            <input type="file" id="newsongfile" accept="audio/*"><br>
+            <input type="submit" id="upload-button">
+	    -->
+        </form>
+    </div>
+
+    <input type="file" id="file-chooser" accept="audio/*" /><br><br>
+    <button id="upload-button">Submit</button>
+    <div id="results"></div>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/upload.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.3.5.min.js"></script>
+    <script src="scripts/upload.js"></script> 
+    
+</body>
+</html>

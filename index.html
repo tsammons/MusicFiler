@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Sharer</title>
+</head>
+<body>
+
+    <div id="fixed-container">
+
+        <div id="Header">
+            <p id="HeaderBrand"><a href="index.html">MUSIC SHARERER</a></p>
+
+            <div id="buts">
+                <button type="submit" id="signup-button">Signup</button>
+                <button type="submit" id="login-button">Login</button>
+                <button type="submit" id="logout-button">Logout</button>
+                <button type="submit" id="facebook-button">Login with Facebook</button>
+
+                <form action="uploadfile.html" id="uploadbutton">
+                    <input type="submit" value="Upload a Song">
+                </form>
+
+                <form action="mysongs.html" id="profilebutton">
+                    <input type="submit" value="My Profile">
+                </form>
+
+            </div>
+        </div>
+
+
+        <div id="preferences">
+            <form id="genreform">
+                <!--<label>genre</label><br>-->
+                <select id="choose-genre">
+                    <option value="all">All Genres</option>
+                    <option value="alternative">Alternative</option>
+                    <option value="hiphop">Hip-Hop</option>
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="country">Country</option>
+                    <option value="edm">Dance/Electronic</option>
+                    <option value="classical">Classical</option>
+                </select>
+            </form>
+            <form id="sortform">
+                <!--<label>sort-by</label><br>-->
+                <select id="choose-view">
+                    <option value="timestamp">New</option>
+                    <option value="likes">Popular</option>
+                </select>
+            </form>
+            <input id="genrebutton" type="submit" value="Sort">
+
+            <form id="searchform">
+                <input id="searchterm" type="text" placeholder="Search...">
+                <input id="searchbutton" type="button" value="Search">
+            </form>
+        </div>
+
+    </div>
+
+        <form id="signup-form">
+            <label for="signup-email" class="left">Email</label>
+            <input type="email" id="signup-email" placeholder="a@xyz.com" required><br>
+
+            <label for="signup-name" class="left">Name</label>
+            <input type="text" id="signup-name" placeholder="alias" required><br>
+
+            <label for="signup-phone" class="left">Phone</label>
+            <input type="tel" id="signup-phone" placeholder="alias" required><br>
+
+            <label for="signup-password" class="left">Password</label>
+            <input type="password" id="signup-password" placeholder="password" required><br>
+
+            <label for="signup-password-conf" class="left">Confirm</label>
+            <input type="password" id="signup-password-conf" placeholder="password" required><br>
+
+            <label for="signup-street" class="left">Street Adress </label>
+            <input type="text" id="signup-street" placeholder="alias" required><br>
+
+            <label for="signup-city" class="left">City</label>
+            <input type="text" id="signup-city" placeholder="alias" required><br>
+
+            <label for="signup-state" class="left">State</label>
+            <input type="text" id="signup-state" placeholder="alias" required><br>
+
+            <label for="signup-zip" class="left">ZIP Code</label>
+            <input type="number" id="signup-zip" placeholder="alias" required><br>
+
+            <input type="submit" value="submit">
+        </form>
+        <form id="login-form">
+            <label for="login-email" class="left">Email</label>
+            <input type="email" id="login-email" placeholder="a@xyz.com" required><br>
+            <label for="login-password" class="left">Password</label>
+            <input type="password" id="login-password" placeholder="password" required><br>
+            <input type="submit" value="login">
+        </form>
+
+
+
+    <div id="musicdiv">
+        <ul id="songlist"></ul>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <script src="scripts/authentication.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/sorting.js"></script>
+</body>
+</html>
